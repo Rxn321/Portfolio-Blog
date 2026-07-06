@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import Toggle from "./components/Toggle";
 import { motion } from "framer-motion";
 
-import lightBg from "./assets/lightBg.jpg?w=1920&format=avif&quality=70";
-import darkBg from "./assets/darkBg.jpg?w=1920&format=avif&quality=70";
+import lightBg from "./assets/lightBg.avif";
+import darkBg from "./assets/darkBg.avif";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);

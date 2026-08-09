@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <div className="h-screen relative overflow-hidden bg-neutral-800">
+    <div className={`h-screen relative overflow-hidden ${darkMode ? "bg-neutral-900" : "bg-zinc-400"}`}>
       <div className="absolute inset-0 z-0">
         <Gallery />
       </div>
@@ -52,7 +52,6 @@ function App() {
         transition={{
           duration: 0.8,
           ease: [0.6, 0, 0.4, 1],
-          opacity: {duration: 0.7},
         }}
         style={{
           transformOrigin: "center bottom",

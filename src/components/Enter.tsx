@@ -1,8 +1,8 @@
 import { getTheme } from "../styles/theme";
 import useIsMobile from "../styles/mobile"
 
-function Enter({ darkMode }: { darkMode: boolean }) {
-  
+function Enter({darkMode, onEnter,}: {darkMode: boolean;onEnter: () => void;}) {
+
   const theme = getTheme(darkMode);
   const isMobile = useIsMobile();
   
@@ -14,8 +14,8 @@ function Enter({ darkMode }: { darkMode: boolean }) {
         </h1>
 
         <button className="px-8 py-2 rounded-full border-2 border-white bg-transparent text-white flex items-center gap-2 
-        text-lg font-medium hover:bg-gray-200/20 transition">
-          In progress
+        text-lg font-medium hover:bg-gray-200/20 transition" onClick={onEnter}>
+          Enter
         </button>
       </div>
     </section>

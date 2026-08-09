@@ -4,7 +4,7 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 function Footer(){
 
 return(
-    <footer className="flex justify-center py-10">
+    <footer className="flex justify-center py-8">
         <div className="flex gap-6">
 
             <a

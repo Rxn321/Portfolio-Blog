@@ -1,15 +1,25 @@
 import { posts } from "../data/posts";
 
-export function BlogGrid() {
+export function Gallery() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {posts.map((post) => (
-        <article key={post.id}>
-          <img src={post.image} alt={post.title} />
-          <h2>{post.title}</h2>
-          <p>{post.description}</p>
-        </article>
-      ))}
-    </div>
+    <section className="w-full h-screen pt-25 pb-25">
+      <div className="h-full w-full overflow-y-auto">
+        {/* Photos */}
+        <div className="grid grid-cols-[repeat(auto-fill,160px)] justify-center gap-2">
+          {posts.map((post) => (
+            <article key={post.id} className="h-[160px] w-[160px]">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="block h-full w-full object-cover rounded-md"
+              />
+            </article>
+          ))}
+        </div>
+
+      </div>
+    </section>
   );
 }
+
+export default Gallery;

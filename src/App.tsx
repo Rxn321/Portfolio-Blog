@@ -29,7 +29,11 @@ function App() {
   }, []);
 
   return (
-    <div className="h-screen relative overflow-hidden bg-gray-500">
+    <div className="h-screen relative overflow-hidden bg-neutral-800">
+      <div className="absolute inset-0 z-0">
+        <Gallery />
+      </div>
+
       <motion.div
         className="absolute inset-0 will-change-transform"
         animate={
@@ -56,7 +60,7 @@ function App() {
         {/* Light */}
         <motion.img
           src={lightBg}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-10"
           initial={false}
           animate={{
             opacity: darkMode ? 0 : 1,
@@ -67,7 +71,7 @@ function App() {
         {darkLoaded && (
           <motion.img
             src={darkBg}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover z-10"
             initial={false}
             animate={{
               opacity: darkMode ? 1 : 0,
@@ -86,11 +90,11 @@ function App() {
           transition={{ duration: 0.7 }}
         />
 
-        <div className="relative z-10">
+        <div className="relative z-20">
           <Header darkMode={darkMode} />
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
           <Enter
             darkMode={darkMode}
             onEnter={() => setEntered(true)}
@@ -100,14 +104,11 @@ function App() {
       </motion.div>
 
       {/* Toggle&Home */}
-      <div className="absolute top-4 right-10 z-10">
+      <div className="absolute top-4 right-10 z-20">
         <Toggle darkMode={darkMode} toggleTheme={() => setDarkMode(!darkMode)}/>
         </div>
-      <div className="absolute top-4 left-10 z-10">
+      <div className="absolute top-4 left-10 z-20">
         <Home onHome={() => setEntered(false)} />
-      </div>
-       <div className="">
-        <Gallery />
       </div>
       {/* Footer */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20">

@@ -2,6 +2,7 @@ import Enter from "./components/Enter";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Gallery from "./components/Gallery";
 import { useEffect, useState } from "react";
 import Toggle from "./components/Toggle";
 import { motion } from "framer-motion";
@@ -34,8 +35,8 @@ function App() {
         animate={
           entered
             ? {
-                y: 0,
-                scale: 1.5,
+                y: "-100vh",
+                scale: 1.1,
                 opacity: 0,
               }
             : {
@@ -45,12 +46,12 @@ function App() {
               }
         }
         transition={{
-          duration: 1.5,
-          ease: [0.2, 1, 0.4, 1],
+          duration: 0.8,
+          ease: [0.6, 0, 0.4, 1],
+          opacity: {duration: 0.7},
         }}
         style={{
-          transformOrigin: "center center",
-          perspective: 1200,
+          transformOrigin: "center bottom",
         }}>
         {/* Light */}
         <motion.img
@@ -104,6 +105,9 @@ function App() {
         </div>
       <div className="absolute top-4 left-10 z-10">
         <Home onHome={() => setEntered(false)} />
+      </div>
+       <div className="">
+        <Gallery />
       </div>
       {/* Footer */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20">

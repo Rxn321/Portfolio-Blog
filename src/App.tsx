@@ -39,16 +39,16 @@ function App() {
         animate={{
           y: entered ? "-100vh" : 0,
           scale: entered ? 1.1 : 1,
-            "--mask-y": entered ? "-20%" : "20%",
+            "--mask-y": entered ? "-100%" : "-30%",
         }}
         transition={{
           duration: 1.5,
-          ease: [0.6, 0, 0.4, 1],
+          ease: [0.6, 0, 0.4, 1]
         }}
         style={{
           transformOrigin: "center bottom",
-          WebkitMaskImage:"radial-gradient(ellipse 120% 100% at 50% var(--mask-y), black 99%, transparent 100%)",
-          maskImage:"radial-gradient(ellipse 120% 100% at 50% var(--mask-y), black 99%, transparent 100%)"
+          WebkitMaskImage:"radial-gradient(ellipse 150% 140% at 50% var(--mask-y), black 99%, transparent 100%)",
+          maskImage:"radial-gradient(ellipse 150% 140% at 50% var(--mask-y), black 99%, transparent 100%)"
         }as React.CSSProperties}>
         {/* Prevent Show through */}
         <div

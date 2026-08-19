@@ -35,27 +35,26 @@ function App() {
       </div>
 
       <motion.div
-        className="absolute inset-0 will-change-transform"
-        animate={
-          entered
-            ? {
-                y: "-100vh",
-                scale: 1.1,
-                opacity: 0,
-              }
-            : {
-                y: 0,
-                scale: 1,
-                opacity: 1,
-              }
-        }
+        className="absolute inset-0 z-10 will-change-transform"
+        animate={{
+          y: entered ? "-100vh" : 0,
+          scale: entered ? 1.1 : 1,
+            "--mask-y": entered ? "-20%" : "20%",
+        }}
         transition={{
-          duration: 0.8,
+          duration: 1.5,
           ease: [0.6, 0, 0.4, 1],
         }}
         style={{
           transformOrigin: "center bottom",
-        }}>
+          WebkitMaskImage:"radial-gradient(ellipse 120% 100% at 50% var(--mask-y), black 99%, transparent 100%)",
+          maskImage:"radial-gradient(ellipse 120% 100% at 50% var(--mask-y), black 99%, transparent 100%)"
+        }as React.CSSProperties}>
+        {/* Prevent Show through */}
+        <div
+          className={`absolute inset-0 ${
+          darkMode ? "bg-neutral-700" : "bg-zinc-400"
+        }`}/>
         {/* Light */}
         <motion.img
           src={lightBg}
@@ -65,7 +64,7 @@ function App() {
             opacity: darkMode ? 0 : 1,
             scale: darkMode ? 1.1 : 1,
           }}
-          transition={{ duration: 0.7 }}/>
+          transition={{ duration: 0.7}}/>
         {/* DARK BACKGROUND */}
         {darkLoaded && (
           <motion.img
@@ -99,9 +98,7 @@ function App() {
             onEnter={() => setEntered(true)}
           />
         </div>
-
       </motion.div>
-
       {/* Toggle&Home */}
       <div className="absolute top-4 right-10 z-20">
         <Toggle darkMode={darkMode} toggleTheme={() => setDarkMode(!darkMode)}/>

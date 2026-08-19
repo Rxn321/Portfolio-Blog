@@ -43,7 +43,7 @@ function App() {
         }}
         transition={{
           duration: 1.5,
-          ease: [0.6, 0, 0.4, 1]
+          ease: [0.5, 1, 0.25, 1],
         }}
         style={{
           transformOrigin: "center bottom",

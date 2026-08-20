@@ -23,8 +23,8 @@ for (const file of files) {
     continue;
   }
 
-  const name = path.basename(file, ext);
-  const input = path.join(inputDir, file);
+const name = path.parse(file).name;
+const input = path.join(inputDir, file);
 
   try {
     // Full WebP image

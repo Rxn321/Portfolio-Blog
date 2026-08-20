@@ -31,3 +31,6 @@ Thumbs.db
 
 # TypeScript build files
 *.tsbuildinfo
+
+#mah photos
+photos/

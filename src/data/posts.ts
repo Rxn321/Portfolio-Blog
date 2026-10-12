@@ -17,7 +17,7 @@ export const posts: Post[] = [
     date: "2025-11-23",
     thumbnail: "/posts/optimized/cypress-thumb.webp",
     image: "/posts/photos/cypress.webp",
-    description: "Snowboarding at Cypress Mountain on a winter day.",
+    description: "I love snowboarding.",
   },
     {
     id: "hollyburn",
@@ -25,7 +25,7 @@ export const posts: Post[] = [
     date: "2026-01-24",
     thumbnail: "/posts/optimized/hollyburn-thumb.webp",
     image: "/posts/photos/hollyburn.webp",
-    description: "A winter hike carrying hollyburn rocket onto Hollyburn Mountain.",
+    description: "hollyburn rocket on Hollyburn Mountain.",
   },
     {
     id: "joffreLake",
@@ -33,7 +33,7 @@ export const posts: Post[] = [
     date: "2026-06-09",
     thumbnail: "/posts/optimized/joffreLake-thumb.webp",
     image: "/posts/photos/joffreLake.webp",
-    description: "A scenic view of Joffre Lake during the summer months.",
+    description: "Not bad",
   },
     {
     id: "richmond",
@@ -41,7 +41,7 @@ export const posts: Post[] = [
     date: "2026-05-01",
     thumbnail: "/posts/optimized/richmond-thumb.webp",
     image: "/posts/photos/richmond.webp",
-    description: "A beautiful view of Richmond during the spring season.",
+    description: "Plane watching near UBC",
   },
     {
     id: "quebec",
@@ -49,7 +49,7 @@ export const posts: Post[] = [
     date: "2026-05-02",
     thumbnail: "/posts/optimized/quebec-thumb.webp",
     image: "/posts/photos/quebec.webp",
-    description: "A stunning view of Quebec during the autumn season.",
+    description: "Quebec during the autumn season. Hope to go back in the winter.",
   },
     {
     id: "moab",
